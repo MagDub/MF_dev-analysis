@@ -13,7 +13,7 @@ rm_anova_MFdev_nocov <- function(x1, x2) {
   library(lsr)
   
   
-  dataMFdev <- read_excel("~/GoogleDrive/UCL/MFdev/excels/data_thompson_mod12_B2.xlsx")   
+  dataMFdev <- read_excel("./data_thompson_mod12_B2.xlsx")   
   
   # Take only subset: concatenate the ones we want
   data_tmp <- subset(dataMFdev , select=c("ID", x1, x2, "ageGroup", "Wasi_IQ"))

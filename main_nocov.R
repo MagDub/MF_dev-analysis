@@ -1,5 +1,5 @@
 
-source('~/GoogleDrive/UCL/MFdev/analysis/stats/R_scripts/fct_analysis_2way_nocov.R')
+source('./fct_analysis_2way_nocov.R')
 
 #### ALL GROUPS
 
@@ -21,6 +21,7 @@ all_text = c(
   'EV:','', rm_anova_MFdev_nocov('EV_SH', 'EV_LH'),'','', '', 
   
   'score 1st SH vs 1st LH:','', rm_anova_MFdev_nocov('first_SH', 'first_LH'),'','', '', 
+  'score 1st LH vs all LH:','', rm_anova_MFdev_nocov('first_LH', 'all_LH'),'','', '', 
   'score 1st SH vs all LH::','', rm_anova_MFdev_nocov('first_SH', 'all_LH'),'','', '', 
   
   'score LH explored vs exploit 1st','', rm_anova_MFdev_nocov('mean_explored_1', 'mean_exploit_1'),'','', '', 
@@ -30,6 +31,6 @@ all_text = c(
   
 )
 
-fileConn<-file("~/GoogleDrive/UCL/MFdev/analysis/stats/txt_res/results_nocov_B2.txt")
+fileConn<-file("./txt_res/results_nocov_B2.txt")
 writeLines(all_text, fileConn)
 close(fileConn)
